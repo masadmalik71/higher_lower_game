@@ -5,6 +5,7 @@ import re
 import random
 import os
 
+random_number2 = 0
 random_number1 = random.randint(0, len(data))
 random_number_bol = False
 while not random_number_bol:
@@ -31,6 +32,8 @@ game_loop = False
 while not game_loop:
     os.system('cls')
     print(logo)
+    if current_score > 0:
+        print(f"You're right! Currently score: {current_score}")
     print(f"Compare A: {compare_a['name']}, a {compare_a['description']}, from {compare_a['country']}.")
     print(vs)
     print(f"Compare B: {compare_b['name']}, a {compare_b['description']}, from {compare_b['country']}.")
@@ -52,7 +55,6 @@ while not game_loop:
 
     if user_choice >= left:
         current_score += 1
-        print(f"You're right! Currently score: {current_score}")
         if compare_b["follower_count"] > compare_a["follower_count"]:
             compare_a = compare_b
         already_used_number = data.index(compare_b)

@@ -40,7 +40,7 @@ while not game_loop:
     input_loop = False
     while not input_loop:
         user_input = input("Who has more followers: ")
-        user_input_list = re.findall("a|b", user_input)
+        user_input_list = re.findall('(a|b)', user_input)
         if user_input_list:
             user_input = ''.join(user_input_list)
             if user_input == 'a':

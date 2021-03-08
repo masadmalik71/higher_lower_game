@@ -42,7 +42,7 @@ while not game_loop:
         user_input = input("Who has more followers: ")
         user_input_list = re.findall('(a|b)', user_input)
         if user_input_list:
-            #user_input = ''.join(user_input_list)
+            # user_input = ''.join(user_input_list)
             if user_input[0] == 'a':
                 user_choice = int(compare_a['follower_count'])
                 left = int(compare_b['follower_count'])
